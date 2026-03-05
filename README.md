@@ -26,7 +26,7 @@ Another thing that was tricky was getting the square to stay purple instead of r
 
 ## Screenshots
 
-As a side note, I read the "throughout the development process phrase" just now, so I totally misunderstood what you were asking for. I if you want different screenshots, please let me know and I can re-create what I had before.
+As a side note, I read the "_throughout the development process_" phrase just now, so I totally misunderstood what you were asking for. I if you want different screenshots, please let me know and I can re-create what I had before.
 
 ![Partially complete animation](Partially_complete.png)
 
