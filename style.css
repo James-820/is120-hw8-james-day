@@ -6,8 +6,9 @@
 
   --anim-border-width: 1.5rem;
   --anim-square-size: 10rem;
-  --anim-time: 10s;
-  --anim-delay: 2s;
+  --anim-time: 1s;
+  --anim-delay: 1.5s;
+  --anim-delay-2: 0.2s;
 }
 
 * {
@@ -39,24 +40,25 @@ main {
 }
 
 .animated#one {
-  border-top-color: var(--final-color);
-  border-left-color: var(--final-color);
+  /* border-top-color: var(--final-color); */
+  /* border-left-color: var(--final-color); */
 
-  animation: rotate1 var(--anim-time) ease-out;
+  animation: rotate1 var(--anim-time) var(--anim-delay) ease-out forwards;
 }
 
 .animated#two {
   /* background-color: var(--final-color); */
   background-color: transparent;
 
-  animation: grow var(--anim-time) var(--anim-delay) ease-in-out forwards;
+  animation: grow var(--anim-time) calc(var(--anim-delay) + var(--anim-delay-2))
+    ease-in-out forwards;
 }
 
 .animated#thr {
-  border-bottom-color: var(--final-color);
-  border-right-color: var(--final-color);
+  /* border-bottom-color: var(--final-color); */
+  /* border-right-color: var(--final-color); */
 
-  animation: rotate3 var(--anim-time) ease-out;
+  animation: rotate3 var(--anim-time) var(--anim-delay) ease-out forwards;
 }
 
 /* Keyframes
