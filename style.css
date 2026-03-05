@@ -1,0 +1,116 @@
+/* High Level Styling
+================================================================================ */
+
+:root {
+  --test-clr-1: green;
+  --test-clr-2: red;
+  --test-clr-3: blue;
+  --test-clr-4: lightyellow;
+  --final-color: purple;
+
+  --anim-border-width: 1.5rem;
+  --anim-square-size: 10rem;
+  --anim-time: 1s;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+main {
+  min-height: 100vh;
+  /* background-color: var(--test-clr-4); */
+  /* display: grid;
+  grid-template: 1fr / 1fr; */
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Animation Elements Styling
+================================================================================ */
+
+.animated {
+  width: var(--anim-square-size);
+  aspect-ratio: 1;
+  position: absolute;
+}
+
+.border {
+  border: var(--anim-border-width) solid transparent;
+}
+
+.animated#one {
+  border-top-color: var(--test-clr-1);
+  border-left-color: var(--test-clr-1);
+
+  animation: rotate1 var(--anim-time) ease-out;
+}
+
+.animated#two {
+  background-color: var(--test-clr-2);
+
+  animation: grow var(--anim-time) ease-in-out;
+}
+
+.animated#thr {
+  border-bottom-color: var(--test-clr-3);
+  border-right-color: var(--test-clr-3);
+
+  animation: rotate3 var(--anim-time) ease-out;
+}
+
+/* Keyframes
+================================================================================ */
+
+@keyframes grow {
+  from {
+    transform: scale(0);
+    background-color: transparent;
+  }
+  to {
+    transform: scale(100%);
+    background-color: var(--test-clr-2);
+  }
+}
+
+@keyframes rotate1 {
+  from {
+    /* transform: translate(-100%, 0); */
+    transform: translate(-100%, 0) rotate(0.25turn);
+    border-top-color: transparent;
+    border-left-color: transparent;
+  }
+  to {
+    /* transform: translate(0, 0); */
+    transform: translate(0, 0) rotate(0);
+    border-top-color: var(--test-clr-1);
+    border-left-color: var(--test-clr-1);
+  }
+}
+
+@keyframes rotate3 {
+  from {
+    transform: translate(100%, 0) rotate(0.25turn);
+    border-bottom-color: transparent;
+    border-right-color: transparent;
+  }
+  to {
+    transform: translate(0, 0) rotate(0);
+    border-bottom-color: var(--test-clr-3);
+    border-right-color: var(--test-clr-3);
+  }
+}
+
+/* @keyframes translate1 {
+  from {
+    transform: translate(-100%, 0);
+  }
+  to {
+    transform: translate(0, 0);
+  }
+} */
