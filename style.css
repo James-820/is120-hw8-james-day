@@ -2,15 +2,12 @@
 ================================================================================ */
 
 :root {
-  --test-clr-1: green;
-  --test-clr-2: red;
-  --test-clr-3: blue;
-  --test-clr-4: lightyellow;
   --final-color: purple;
 
   --anim-border-width: 1.5rem;
   --anim-square-size: 10rem;
-  --anim-time: 1s;
+  --anim-time: 10s;
+  --anim-delay: 2s;
 }
 
 * {
@@ -21,9 +18,6 @@
 
 main {
   min-height: 100vh;
-  /* background-color: var(--test-clr-4); */
-  /* display: grid;
-  grid-template: 1fr / 1fr; */
   position: relative;
   display: flex;
   flex-direction: column;
@@ -45,21 +39,22 @@ main {
 }
 
 .animated#one {
-  border-top-color: var(--test-clr-1);
-  border-left-color: var(--test-clr-1);
+  border-top-color: var(--final-color);
+  border-left-color: var(--final-color);
 
   animation: rotate1 var(--anim-time) ease-out;
 }
 
 .animated#two {
-  background-color: var(--test-clr-2);
+  /* background-color: var(--final-color); */
+  background-color: transparent;
 
-  animation: grow var(--anim-time) ease-in-out;
+  animation: grow var(--anim-time) var(--anim-delay) ease-in-out forwards;
 }
 
 .animated#thr {
-  border-bottom-color: var(--test-clr-3);
-  border-right-color: var(--test-clr-3);
+  border-bottom-color: var(--final-color);
+  border-right-color: var(--final-color);
 
   animation: rotate3 var(--anim-time) ease-out;
 }
@@ -74,7 +69,7 @@ main {
   }
   to {
     transform: scale(100%);
-    background-color: var(--test-clr-2);
+    background-color: var(--final-color);
   }
 }
 
@@ -88,8 +83,8 @@ main {
   to {
     /* transform: translate(0, 0); */
     transform: translate(0, 0) rotate(0);
-    border-top-color: var(--test-clr-1);
-    border-left-color: var(--test-clr-1);
+    border-top-color: var(--final-color);
+    border-left-color: var(--final-color);
   }
 }
 
@@ -101,8 +96,8 @@ main {
   }
   to {
     transform: translate(0, 0) rotate(0);
-    border-bottom-color: var(--test-clr-3);
-    border-right-color: var(--test-clr-3);
+    border-bottom-color: var(--final-color);
+    border-right-color: var(--final-color);
   }
 }
 
