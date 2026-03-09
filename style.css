@@ -6,9 +6,9 @@
 
   --anim-border-width: 1.5rem;
   --anim-square-size: 10rem;
-  --anim-time: 1s;
+  --anim-time: 0.5s;
   --anim-delay: 1.5s;
-  --anim-delay-2: 0.2s;
+  --anim-delay-2: 0.1s;
 }
 
 * {
